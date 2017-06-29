@@ -1,0 +1,218 @@
+.section{
+	position: relative;
+	overflow: hidden;
+}
+/*导航栏*/
+#menu { margin: 0; padding: 0; position: fixed; left: 10px; top: 10px; list-style-type: none; z-index: 70;}
+#menu li { float: left; margin:  0 10px 0 0; font-size: 14px;}
+#menu a { float: left; padding: 10px 20px; 
+	color: #dd22aa; text-decoration: none;font-weight: 700;
+	border-radius: 10%;}
+#menu .active a { color: #99ff66; background-color: #55aacc;}
+/* 背景图*/
+.second{
+	background: url(../images/bj2.jpg)   no-repeat center;
+	background-size:100% 100%;
+}
+.third{
+	background: url(../images/bj3.jpg)   no-repeat center; 
+	background-size:100% 100%;
+}
+.fourth{
+	background: url(../images/bj4.jpg)  no-repeat center;
+	background-size:100% 100%;
+}
+.five{
+	background: url(../images/bj5.jpg)  no-repeat center;
+	background-size:100% 100%;
+}
+.six{
+	background: url(../images/bj6.jpg)  no-repeat center;
+	background-size:100% 100%;
+}
+/* 第一屏 */
+.first{
+	padding-top: 50px;
+}
+.menu {
+	font-size: 1em;
+	text-align:center;
+	position:absolute;
+	z-index:1;
+	width:98%;
+}
+
+.menu a {
+	display: inline-block;
+	margin: 0.35em 0.1em;
+	padding: 0.5em 1.2em;
+	outline: none;
+	text-decoration: none;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: 700;
+	border-radius: 10%;
+	font-size: 110%;
+	border: 2px solid transparent;
+	color:#55aacc;
+}
+.ups{
+	position: absolute;
+	top:92px;
+	left: 50%;
+	margin-left: -365px;
+	width: 730px;
+	height: 80%;
+	border:2px solid transparent;
+	display: none;
+}
+.ups h3{
+	text-align: center;
+	font-size: 30px;
+}
+span{
+	display: inline-block;
+	width: 100%;
+	height: 20px;
+	line-height: 20px;
+	text-align: center;
+}
+.ups p{
+	font-size: 50px;
+	text-align: center;
+	margin-top: 20px;
+}
+.ups ul li{
+	font-size: 24px;
+	text-align: center;
+}
+h2{
+	color:#dd33dd;
+	font-size: 45px;
+	text-align: center;
+	margin-top: 25%;
+	opacity: 0.5;
+}
+.menu a.current {
+	border-color: #55aaaa;
+}
+.first.curr a{
+	transition: all 0.3s ease-in-out 0.2s;
+}
+/* 所有h2旋转 */
+.curr h2{
+	transform: translate(0, 0) rotate(360deg);
+	transition: all .8s ease-in-out;
+}
+/* 第二屏 */
+.sec{
+	width: 100%;
+	height: 100%;
+	display: none;
+}
+.sec span{
+	position: relative;
+	display:block;
+	width: 45%;
+	overflow: hidden;
+	min-height: 1.5em;
+	line-height: 1.4em;
+	font-size: 1.2em;
+	height: auto;
+	text-align: left;
+	text-indent: 5px;
+	background: rgba(221,51,170,0.5);
+	border:transparent;
+	border-radius: 10px;
+	box-shadow:0 0 3px 3px #06c ;
+}
+/* 第二屏动画 */
+.second.curr span:nth-child(1){
+	-webkit-animation:one 1.8s linear 0s forwards;
+}
+.second.curr span:nth-child(2){
+	-webkit-animation:two 2.2s linear 0s forwards;
+}
+.second.curr span:nth-child(3){
+	-webkit-animation:three 2.0s linear 0s forwards;
+}
+.second.curr span:nth-child(4){
+	-webkit-animation:fourth 2.0s linear 0s forwards;
+}
+.second.curr span:nth-child(5){
+	-webkit-animation:five 2.2s linear 0s forwards;
+}
+.second.curr span:nth-child(6){
+	-webkit-animation:six 2.4s linear 0s forwards;
+}
+@keyframes one
+{
+0%   {top:0px; left:0px; }
+25%  {top:-70%; left:-60%;}
+50%  {top:30%; left:-40%;}
+75%  {top:-70%; left:-20%; }
+100% {top:-46%; left:-30%; }
+}
+@keyframes two
+{
+0%   {top:0px; left:0px; }
+25%  {top:-70%; left:60%;}
+50%  {top:30%; left:40%;}
+75%  {top:-70%; left:20%; }
+100% {top:-40%; left:30%; }
+}
+@keyframes three
+{
+0%   {top:0px; left:0px; }
+25%  {top:-70%; left:-60%;}
+50%  {top:30%; left:-40%;}
+75%  {top:-70%; left:-20%; }
+100% {top:-38%; left:-30%; }
+}
+@keyframes fourth
+{
+0%   {top:0px; left:0px; }
+25%  {top:-70%; left:60%;}
+50%  {top:30%; left:40%;}
+75%  {top:-70%; left:20%; }
+100% {top:-32%; left:30%; }
+}
+@keyframes five
+{
+0%   {top:0px; left:0px; }
+25%  {top:-70%; left:-60%;}
+50%  {top:30%; left:-40%;}
+75%  {top:-70%; left:-20%; }
+100% {top:-30%; left:-30%; }
+}
+@keyframes six
+{
+0%   {top:0px; left:0px; }
+25%  {top:-70%; left:60%;}
+50%  {top:30%; left:40%;}
+75%  {top:-70%; left:20%; }
+100% {top:-24%; left:30%; }
+}
+/* 第三屏 */
+.thir{
+	width: 80%;
+	height: 30%;
+	background: #aa333f;
+	margin: 0 auto;
+}
+/* 第六屏 */
+.six ul{
+	margin-top: 5%;
+	margin-left: 2%;
+	
+}
+.six img{
+	display: inline-block;
+	width:12%;
+	float: left;
+	position: absolute;
+	top: 50%;
+	left: 2%;
+	opacity: 0;
+
+}
